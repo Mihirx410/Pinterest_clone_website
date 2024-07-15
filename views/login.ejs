@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <!--pinterest logo-->
+            <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"
+                class="img1" />
+
+            <p class="header">Log in to see more</p>
+
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" class="detail" />
+                <input type="password" name="password" placeholder="Password" class="detail" />
+
+                <!--error is an array so we"ll use length-->
+                <% if(error.length>0){%>
+                    <p class="error">
+                        <%= error %>
+                    </p>
+                    <% } %>
+                        <input type="submit" class="btn int" value="Login Your Account">
+            </form>
+
+            <!-- <a href="/forgotpass">Forgot your password?</a> -->
+            <hr />
+            <a href="/">Not on Pinterest yet? Register yourself</p>
+                </footer>
+        </div>
+    </div>
+    <!-- <a href="/register" class=" upbtn">Sign up</div> -->
+
+</body>
+
+</html>

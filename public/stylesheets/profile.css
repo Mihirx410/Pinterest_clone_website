@@ -1,0 +1,262 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Card1 styles */
+.card1 {
+  background: #ffffffc3;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+  padding-top: 75px;
+}
+
+.card-banner1 {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  bottom:74px;
+}
+
+.card-banner1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-profile1 {
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-profile1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.uname {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  padding: 8px;
+}
+
+.fname {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.email {
+  font-size: 16px;
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.tagline {
+  font-style: italic;
+  color: #5a6565;
+  margin-bottom: 10px;
+}
+
+.btn-add-post {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn-add-post:hover {
+  background-color: #c0392b;
+}
+
+/* Posts section */
+.posts-upload {
+  background-color: #34495e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: 30px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Container-2 and Card2 styles */
+.container-2 {
+  margin-top: 10px;
+  padding: 20px 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card2 {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card2 .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card2 .card-body {
+  padding: 20px;
+}
+
+.card2 .card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Profile edit buttons */
+.profile-edit,
+.profile-edit2 {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.profile-edit {
+  top: 15rem;
+  left: 49rem;
+}
+
+.profile-edit2 {
+  top: 10px;
+  right: 10px;
+}
+
+.profile-edit:hover,
+.profile-edit2:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.svg-profile,
+.svg-profile2 {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.svg-profile:hover,
+.svg-profile2:hover {
+  transform: scale(1.1);
+}
+
+.clickhere{
+  border-radius: 10px;
+  color:black;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration:underline;
+}
+
+.no-pfp-upload{
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left:20px;
+  padding: 10px;
+}
+.no-banner-upload{
+padding: 10px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .card1 {
+    margin-top: 20px;
+  }
+
+  .card-banner1 {
+    height: 150px;
+  }
+
+  .card-profile1 {
+    width: 120px;
+    height: 120px;
+    top: 90px;
+  }
+
+  .uname {
+    font-size: 24px;
+  }
+
+  .fname {
+    font-size: 16px;
+  }
+
+  .email {
+    font-size: 14px;
+  }
+
+  .posts-upload {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+}

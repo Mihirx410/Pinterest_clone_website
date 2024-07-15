@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('/images/source_images/photo-1557683304-673a23048d34.jpg') center center / cover no-repeat; /* Combined shorthand property */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  width: 450px;
+  padding: 25px; /* Reduced padding */
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.img1 {
+  width: 60px; /* Reduced width */
+  margin-top: 10px; /* Reduced margin */
+}
+
+.header {
+  font-size: 28px; /* Reduced font size */
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 36px; /* Reduced line height */
+}
+
+.detail {
+  width: 80%;
+  height: 40px; /* Reduced height */
+  margin: 8px 0; /* Reduced margin */
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  color: gray;
+  border: 2px solid rgb(218, 214, 214);
+  border-radius: 15px;
+}
+
+.detail:focus {
+  box-shadow: 0px -5px 3px -2px rgba(15, 91, 231, 0.4),
+              0px 5px 3px -2px rgba(15, 91, 231, 0.4),
+              5px 0px 3px -2px rgba(15, 91, 231, 0.4),
+              -5px 0px 3px -2px rgba(15, 91, 231, 0.4);
+  outline: none;
+}
+
+.btn {
+  width: 80%;
+  height: 36px; /* Reduced height */
+  border: none;
+  border-radius: 20px;
+  font-size: 16px; /* Reduced font size */
+  margin: 8px 0; /* Reduced margin */
+  cursor: pointer;
+}
+
+.int {
+  background-color: #f30d19;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.int:hover {
+  background-color: #df0812;
+}
+
+.or {
+  font-size: 14px; /* Reduced font size */
+  font-weight: 700;
+  margin: 8px 0; /* Reduced margin */
+}
+
+.fbk {
+  background-color: rgb(9, 128, 240);
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.fbk a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.fbk:hover {
+  background-color: rgb(8, 110, 206);
+}
+
+.ggl {
+  text-align: center;
+  background-color: #ccc;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.ggl a {
+  text-decoration: none;
+  color: black;
+}
+
+.ggl:hover {
+  background-color: #a0a0a0;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 8px 0; /* Reduced margin */
+  opacity: 0.7;
+}
+
+footer p:last-child {
+  opacity: 1;
+}
+
+hr {
+  width: 50%;
+  opacity: 0.4;
+  margin: 8px auto; /* Reduced margin */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 5px 0px;
+}

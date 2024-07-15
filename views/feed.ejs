@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+
+<body>
+    <%- include('header'); -%>
+    <div class="header">
+        <h1>Welcome to Pinterest Image Gallery</h1>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Search for images...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="pin_container">
+        <% if (images.length > 0) { %>
+            <% images.forEach(image => { %>
+            <div class="card">
+                <a href="<%= image.url %>">
+                    <img src="<%= image.url %>" alt="<%= image.name %>">
+                </a>
+                <div class="caption"><%= image.name %></div>
+            </div>
+            <% }) %>
+        <% } else { %>
+            <p class="no-results">No results found. Please try again with different search.</p>
+        <% } %>
+    </div>
+    <%- include('footer'); -%>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/javascripts/feed.js"></script>
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const query = document.getElementById('search-query').value;
+            window.location.href = `/feed?query=${query}`;
+        });
+    </script>
+</body>
+
+</html>

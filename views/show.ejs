@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white flex flex-col min-h-screen">
+    <!-- Header -->
+    <%- include('header'); -%>
+
+    <h3 class="text-white m-7 text-4xl border-b border-white">Your Pins</h3>
+
+    <div class="flex justify-center items-center flex-grow p-6">
+        <div class="w-full max-w-7xl mx-auto">
+            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5">
+                <% user.posts.forEach(post => { %>
+                    <div class="break-inside-avoid bg-gray-800 rounded-lg overflow-hidden shadow-lg transition duration-300 transform hover:scale-105 cursor-pointer mb-5">
+                        <img class="w-full h-auto object-cover" src="/images/uploads/<%= post.image %>" alt="Post Image">
+                        <div class="p-4">
+                            <h5 class="text-lg font-semibold mb-2"><%= post.imagetext %></h5>
+                            <p class="text-gray-400"><%= post.imagedesc %></p>
+                            <form action="/delete/<%= post._id %>" method="POST" class="mt-2" onsubmit="confirmDelete(event)">
+                                <button type="submit" id="del-btn" class="bg-red-500 hover:bg-red-800 text-white font-bold py-1 px-2 rounded">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('footer'); -%>
+
+    <script>
+        function confirmDelete(event) {
+            if (!confirm('Are you sure you want to delete your pin?')) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
